@@ -22,6 +22,14 @@ export class ContactlistComponent implements OnInit{
     this.router.navigate(['/contacts', contactId]);
   }
 
+  edit(contactId: number){
+    this.router.navigate(['/edit', contactId]);
+  }
+
+  delete(contactId: number){
+   // this.router.navigate(['/contacts', contactId]);
+  }
+
   ngOnInit() {
     this.contactService.getContacts().subscribe(data => {
       this.contactList = data.sort((a,b) => a.name > b.name ? 1 : -1)

@@ -27,7 +27,6 @@ export class ContactdetailComponent implements OnInit {
 
     this.contactService.getContactById(this.contactId).subscribe(data => {
       this.contactList = data
-      console.log(this.contactList)
     }) 
   }
 }
