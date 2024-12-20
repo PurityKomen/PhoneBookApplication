@@ -1,27 +1,44 @@
 # Phonebook
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+## Description
 
-## Development server
+A Phonebook application for displaying a list of contacts and viewing a single contact among other features.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Live Link
 
-## Code scaffolding
+## Project Setup
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone the application using git clone [https://github.com/PurityKomen/PhoneBookApplication.git](https://github.com/PurityKomen/PhoneBookApplication.git)
+2. Go into the directory with the code
+3. Run npm install to install node modules
+4. Then run npm start
 
-## Build
+## Technologies Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- ReactJs (Frontend)
+- JsonServer 
+- Tailwind (Styling)
+- Karma for Testing
+- VsCode as my text editor
+- Vercel for deployment
 
-## Running unit tests
+## Deliverables
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Your client application should have these sets of screens/pages:
+1. List all contacts(Alphabetical order)
 
-## Running end-to-end tests
+2. View a single contact
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Edit and update a contact
 
-## Further help
+4. Delete a contact
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+5. Search Contacts
+
+6. Bulk deletion of contacts
+
+7. Homepage toggle
+
+## License
+
+This project uses MIT License
