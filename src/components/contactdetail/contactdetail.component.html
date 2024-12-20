@@ -1,1 +1,14 @@
-<p>contactdetail works!</p>
+<div class="flex justify-around m-4">
+  <a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+    
+    @if (contactList) {
+      <img class="w-full" src='' alt="Contact Image">
+      <p class="font-normal text-gray-700 dark:text-gray-400">Name: {{ contactList.name }}</p>
+      <p class="font-normal text-gray-700 dark:text-gray-400">Email: {{ contactList.email }}</p>
+      <p class="font-normal text-gray-700 dark:text-gray-400">Phone Number: {{ contactList.phone }}</p>
+      <p class="font-normal text-gray-700 dark:text-gray-400">Physical Address: {{ contactList.physicaladdress }}</p>
+    }
+  </a>
+</div>
+
+  

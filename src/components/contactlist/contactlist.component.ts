@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactService } from '../contact.service';
 import { Contact } from '../contact';
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-contactlist',
@@ -11,13 +12,19 @@ import { Contact } from '../contact';
   styleUrl: './contactlist.component.css'
 })
 export class ContactlistComponent implements OnInit{
-  constructor(private contactService:ContactService) {}
+  constructor(
+    private contactService:ContactService,
+    private router: Router
+  ) {}
   contactList!: Contact[];
+
+  toggle(contactId: number){
+    this.router.navigate(['/contacts', contactId]);
+  }
 
   ngOnInit() {
     this.contactService.getContacts().subscribe(data => {
       this.contactList = data.sort((a,b) => a.name > b.name ? 1 : -1)
-      console.log('contact',this.contactList)
     }) 
   }
 
