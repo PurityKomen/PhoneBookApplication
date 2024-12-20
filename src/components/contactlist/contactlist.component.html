@@ -1,1 +1,33 @@
-<p>contactlist works!</p>
+<div class="m-3">
+    <header class="sticky top-0 bg-white z-10">
+        <div class="flex flex-col sm:flex-row sm:items-center pr-4 max-w-[1440px] m-auto">
+            <img src='https://img.icons8.com/?size=40&id=UgroBm8Q6qhd&format=png&color=000000' />
+            <span class="text-[#5f6368] text-xl">Phonebook</span>
+        </div>
+    </header>
+
+    <div class="relative px-4  ">
+        <table class="w-full border-separate">
+          <thead>
+              <th class="w-1/2 text-left font-normal py-3 border-b px-4">
+                Name
+              </th>
+              <th class="w-1/2 text-left font-normal py-3 border-b px-4">
+                Phone Number
+              </th>
+          </thead>
+          <tbody>
+            @for (item of contactList; track item.id) {
+                <tr>
+                    <td>{{ item.name}}</td>
+                    <td>{{ item.phone}}</td>
+                </tr>
+            }
+            
+          </tbody>
+        </table>
+      </div>
+</div>
+
+
+
