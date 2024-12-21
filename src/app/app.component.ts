@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { ContactlistComponent } from '../components/contactlist/contactlist.component';
 import { RouterModule, RouterOutlet  } from '@angular/router';
+import { NgToastModule } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ContactlistComponent, RouterModule, RouterOutlet],
+  imports: [ RouterModule, RouterOutlet,NgToastModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

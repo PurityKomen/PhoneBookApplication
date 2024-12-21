@@ -66,11 +66,11 @@
     },
     {
       "id": "9",
-      "name": "Cecelia Wolf",
+      "phone": "0700000008",
       "email": "ceceliawolf@gmail.com",
-      "contactimage": "https://ui-avatars.com/api/?name=Cecilia&length=1&background=random&size=262",
+      "name": "Cecelia Wolf",
       "physicaladdress": "1234",
-      "phone": "0700000008"
+      "contactimage": "https://ui-avatars.com/api/?name=Cecilia&length=1&background=random&size=262"
     },
     {
       "id": "10",
@@ -82,11 +82,11 @@
     },
     {
       "id": "11",
-      "name": "Bernard Chambers",
+      "phone": "0700000010",
       "email": "bernardchambers@gmail.com",
-      "contactimage": "https://ui-avatars.com/api/?name=Benard&length=1&background=random&size=262",
+      "name": "Bernard Chambers",
       "physicaladdress": "13245",
-      "phone": "0700000010"
+      "contactimage": "https://ui-avatars.com/api/?name=Benard&length=1&background=random&size=262"
     },
     {
       "id": "12",
