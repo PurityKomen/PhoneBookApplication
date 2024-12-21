@@ -22,6 +22,7 @@ export class ContactlistComponent implements OnInit{
 
   contactList!: any;
   searchForm!: FormGroup
+  viewMode: 'list' | 'grid' = 'list';
 
   //When a user clicks on a contact,navigate to the contact details page with contact is
   toggle(contactId: number){
@@ -85,6 +86,11 @@ export class ContactlistComponent implements OnInit{
       this.searchForm.reset()
     }
   )
+  }
+
+  //toggle between list and grid view
+  toggleView(){
+    this.viewMode = this.viewMode === 'list' ? 'grid' : 'list';
   }
 
   ngOnInit() {
