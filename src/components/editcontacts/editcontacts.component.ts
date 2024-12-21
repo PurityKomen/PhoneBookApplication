@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { NgToastService } from 'ng-angular-popup';
 import { Router } from '@angular/router'; 
+import { error } from 'console';
 
 @Component({
   selector: 'app-editcontacts',
@@ -27,6 +28,7 @@ export class EditcontactsComponent implements OnInit {
   contactList!: any;
   editContactsForm!: FormGroup
 
+  //get edit data from the form 
   editContacts(){
     const body = {
       id:this.contactId,
@@ -37,24 +39,32 @@ export class EditcontactsComponent implements OnInit {
       contactimage: this.editContactsForm?.value.contactimage,
     };
 
+    //Update data with the data from the form
     this.contactService.updateContact(body).subscribe(data => {
       this.toast.success('Success Message','Edit Contact Successful',3000)
       setTimeout(() => {
         this.router.navigate(['/contacts']);
     }, 3050);
-    })
+    },
+    error => (
+      this.toast.success('Error Message','Edit Contact not Successful',3000)
+    )
+  )
   }
 
   ngOnInit() {
 
+    //Get contact id from the route 
     this.route.paramMap.subscribe(params => {
       this.contactId = params.get('id'); 
     });
 
+    //fetch contact details from the id
     this.contactService.getContactById(this.contactId).subscribe(data => {
       this.contactList = data 
     }) 
 
+    //Validate data from the form and autofill
     this.editContactsForm = this.fb.group(
       {
           name: [this.contactList?.name, Validators.required],

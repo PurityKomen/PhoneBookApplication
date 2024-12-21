@@ -21,10 +21,12 @@ export class ContactdetailComponent implements OnInit {
 
 
   ngOnInit() {
+    //get contact id from the route
     this.route.paramMap.subscribe(params => {
       this.contactId = params.get('id'); 
     });
 
+    //fetch contact detail from the id 
     this.contactService.getContactById(this.contactId).subscribe(data => {
       this.contactList = data
     }) 
