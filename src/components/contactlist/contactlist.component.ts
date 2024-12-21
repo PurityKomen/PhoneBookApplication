@@ -23,6 +23,7 @@ export class ContactlistComponent implements OnInit{
   contactList!: any;
   searchForm!: FormGroup
   viewMode: 'list' | 'grid' = 'list';
+  isDarkMode:boolean = false
 
   //When a user clicks on a contact,navigate to the contact details page with contact is
   toggle(contactId: number){
@@ -91,6 +92,11 @@ export class ContactlistComponent implements OnInit{
   //toggle between list and grid view
   toggleView(){
     this.viewMode = this.viewMode === 'list' ? 'grid' : 'list';
+  }
+
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+    document.body.classList.toggle('dark');
   }
 
   ngOnInit() {

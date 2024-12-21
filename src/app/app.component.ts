@@ -10,4 +10,5 @@ import { NgToastModule } from 'ng-angular-popup';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  
 }
