@@ -6,7 +6,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { NgToastService } from 'ng-angular-popup';
 import { Router } from '@angular/router'; 
-import { error } from 'console';
 
 @Component({
   selector: 'app-editcontacts',

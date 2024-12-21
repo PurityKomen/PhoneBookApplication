@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Contact } from './contact';
 
 @Injectable({
@@ -29,5 +29,11 @@ export class ContactService {
   // delete contact
   deleteContact(id: number) {
     return this.http.delete(this.baseUrl + '/' + id)
+  }
+
+  // Perform a search
+  searchContact(searchCriteria: { name?: string, email?: string, phone?: string }) {
+    const params = new HttpParams({ fromObject: searchCriteria });
+    return this.http.get(this.baseUrl, { params })
   }
 }
