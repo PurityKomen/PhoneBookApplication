@@ -63,6 +63,7 @@ export class ContactlistComponent implements OnInit{
     }) 
   }
 
+  //Perform a search for either the name,phone nummber or email
   searchContactsDetail(){
     const searchCriteria = {
       name: '',
@@ -94,6 +95,7 @@ export class ContactlistComponent implements OnInit{
     this.viewMode = this.viewMode === 'list' ? 'grid' : 'list';
   }
 
+  //toggle between light and dark mode
   toggleDarkMode() {
     this.isDarkMode = !this.isDarkMode;
     document.body.classList.toggle('dark');
