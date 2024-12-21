@@ -3,11 +3,12 @@ import { ActivatedRoute } from '@angular/router';
 import { ContactService } from '../contact.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-editcontacts',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule,CommonModule],
   templateUrl: './editcontacts.component.html',
   styleUrl: './editcontacts.component.css'
 })
@@ -24,33 +25,38 @@ export class EditcontactsComponent implements OnInit {
 
   editContacts(){
     const body = {
-      phone: this.editContactsForm.value.date,
-      email: this.editContactsForm.value.date,
-      name: this.editContactsForm.value.description,
-      address: this.editContactsForm.value.category,
-      image: this.editContactsForm.value.amount,
+      id:this.contactId,
+      phone: this.editContactsForm?.value.phone,
+      email: this.editContactsForm?.value.email,
+      name: this.editContactsForm?.value.name,
+      physicaladdress: this.editContactsForm?.value.physicaladdress,
+      contactimage: this.editContactsForm?.value.contactimage,
     };
 
+    console.log('body',body)
     this.contactService.updateContact(body).subscribe(data => {
-      this.contactList = data
-      console.log("edit",this.contactList)
-    }) 
+      return data
+    })
   }
 
   ngOnInit() {
-    this.editContacts()
-    
+
     this.route.paramMap.subscribe(params => {
       this.contactId = params.get('id'); 
     });
 
+    this.contactService.getContactById(this.contactId).subscribe(data => {
+      this.contactList = data 
+      console.log(data)
+    }) 
+
     this.editContactsForm = this.fb.group(
       {
-          name: ['', Validators.required],
-          email: [ '',[Validators.required, Validators.email], ],
-          phone: [ '', [Validators.required, Validators.minLength(10)],],
-          address: ['',[Validators.required]],
-          image: ['',[Validators.required],
+          name: [this.contactList?.name, Validators.required],
+          email: [ this.contactList?.email,[Validators.required, Validators.email], ],
+          phone: [ this.contactList?.phone, [Validators.required, Validators.minLength(10)],],
+          physicaladdress: [this.contactList?.physicaladdress,[Validators.required]],
+          contactimage: [this.contactList?.contactimage,[Validators.required],
         ],
       },
   );

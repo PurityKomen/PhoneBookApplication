@@ -3,6 +3,6 @@ export class Contact {
     name: string = ''
     phone: string = ''
     email:string = ''
-    image: string = ''
-    address: string = ''
+    contactimage: string = ''
+    physicaladdress: string = ''
 }
