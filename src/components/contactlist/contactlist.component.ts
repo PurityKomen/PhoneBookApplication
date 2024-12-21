@@ -22,8 +22,10 @@ export class ContactlistComponent implements OnInit{
 
   contactList!: any;
   searchForm!: FormGroup
+  filterForm!: FormGroup
   viewMode: 'list' | 'grid' = 'list';
   isDarkMode:boolean = false
+  selectedGroup: string = 'All';
 
   //When a user clicks on a contact,navigate to the contact details page with contact is
   toggle(contactId: number){
@@ -101,7 +103,23 @@ export class ContactlistComponent implements OnInit{
     document.body.classList.toggle('dark');
   }
 
+  filteredContacts(){
+    const body = {
+      group: this.filterForm?.value.group
+    }
+    if (body === undefined) {
+      return this.contactList;
+    } else {
+      this.contactService.searchContact(body).subscribe(data => {
+        this.contactList = data
+        this.filterForm?.reset()
+      })
+    }
+  }
+
   ngOnInit() {
+    this.filteredContacts()
+    
     this.fetchData()
 
     //Validate data from the form
@@ -111,6 +129,12 @@ export class ContactlistComponent implements OnInit{
           searchField: ['']
       },
   );
+
+  this.filterForm = this.fb.group(
+    {
+        group: ['All']
+    },
+);
   }
 
 }

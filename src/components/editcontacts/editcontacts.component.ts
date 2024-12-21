@@ -36,6 +36,7 @@ export class EditcontactsComponent implements OnInit {
       name: this.editContactsForm?.value.name,
       physicaladdress: this.editContactsForm?.value.physicaladdress,
       contactimage: this.editContactsForm?.value.contactimage,
+      group: this.editContactsForm?.value.group,
     };
 
     //Update data with the data from the form
@@ -70,8 +71,8 @@ export class EditcontactsComponent implements OnInit {
           email: [ this.contactList?.email,[Validators.required, Validators.email], ],
           phone: [ this.contactList?.phone, [Validators.required, Validators.minLength(10)],],
           physicaladdress: [this.contactList?.physicaladdress,[Validators.required]],
-          contactimage: [this.contactList?.contactimage,[Validators.required],
-        ],
+          contactimage: [this.contactList?.contactimage,[Validators.required]],
+          group: [this.contactList?.group,[Validators.required]],
       },
   );
   

@@ -5,4 +5,5 @@ export class Contact {
     email:string = ''
     contactimage: string = ''
     physicaladdress: string = ''
+    group: string = ''
 }

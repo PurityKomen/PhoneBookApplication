@@ -6,6 +6,7 @@
       "email": "elmaherring@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Ella&length=1&background=random&size=262",
       "physicaladdress": "123",
+      "group": "Family",
       "phone": "0700000000"
     },
     {
@@ -14,6 +15,7 @@
       "email": "knappberry@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Knapp=&length=1&background=random&size=262",
       "physicaladdress": "234",
+      "group": "Work",
       "phone": "0700000001"
     },
     {
@@ -22,6 +24,7 @@
       "email": "bellburgess@gmail.com",
       "name": "Bell Burgess",
       "physicaladdress": "4536",
+      "group": "Family",
       "contactimage": "https://ui-avatars.com/api/?name=Bell&length=1&background=random&size=262"
     },
     {
@@ -30,6 +33,7 @@
       "email": "hobbsferrell@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Hobbs&length=1&background=random&size=262",
       "physicaladdress": "54638",
+      "group": "Family",
       "phone": "0700000003"
     },
     {
@@ -38,6 +42,7 @@
       "email": "maryloumedina@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Mary&length=1&background=random&size=262",
       "physicaladdress": "13245",
+      "group": "Family",
       "phone": "0700000004"
     },
     {
@@ -46,6 +51,7 @@
       "email": "larsonguerra@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Larson&length=1&background=random&size=262",
       "physicaladdress": "32456",
+      "group": "Work",
       "phone": "0700000005"
     },
     {
@@ -54,6 +60,7 @@
       "email": "shelbyballard@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Shelby&length=1&background=random&size=262",
       "physicaladdress": "71819",
+      "group": "Friends",
       "phone": "0700000006"
     },
     {
@@ -62,6 +69,7 @@
       "email": "leafaulkner@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Lea&length=1&background=random&size=262",
       "physicaladdress": "13245",
+      "group": "Family",
       "phone": "0700000007"
     },
     {
@@ -70,6 +78,7 @@
       "email": "ceceliawolf@gmail.com",
       "name": "Cecelia Wolf",
       "physicaladdress": "1234",
+      "group": "Family",
       "contactimage": "https://ui-avatars.com/api/?name=Cecilia&length=1&background=random&size=262"
     },
     {
@@ -78,6 +87,7 @@
       "email": "melvanixon@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Melva&length=1&background=random&size=262",
       "physicaladdress": "3456",
+      "group": "Friends",
       "phone": "0700000009"
     },
     {
@@ -86,6 +96,7 @@
       "email": "bernardchambers@gmail.com",
       "name": "Bernard Chambers",
       "physicaladdress": "13245",
+      "group": "Friends",
       "contactimage": "https://ui-avatars.com/api/?name=Benard&length=1&background=random&size=262"
     },
     {
@@ -94,6 +105,7 @@
       "email": "wendibender@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Wendi&length=1&background=random&size=262",
       "physicaladdress": "3456",
+      "group": "Friends",
       "phone": "0700000011"
     },
     {
@@ -102,6 +114,7 @@
       "email": "wallstewart@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Wall&length=1&background=random&size=262",
       "physicaladdress": "42526",
+      "group": "Friends",
       "phone": "0700000012"
     },
     {
@@ -110,6 +123,7 @@
       "email": "howellgilbert@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Howell&length=1&background=random&size=262",
       "physicaladdress": "7499",
+      "group": "Work",
       "phone": "0700000013"
     },
     {
@@ -118,6 +132,7 @@
       "email": "nguyenmaxwell@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Nguyen&length=1&background=random&size=262",
       "physicaladdress": "6589",
+      "group": "Work",
       "phone": "0700000014"
     },
     {
@@ -126,6 +141,7 @@
       "email": "norrishendricks@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Mary&length=1&background=random&size=262",
       "physicaladdress": "54639",
+      "group": "Friends",
       "phone": "0700000015"
     },
     {
@@ -134,6 +150,7 @@
       "email": "salinasmcleod@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Salinas&length=1&background=random&size=262",
       "physicaladdress": "7648",
+      "group": "Family",
       "phone": "0700000016"
     },
     {
@@ -142,6 +159,7 @@
       "email": "michellebarrett@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Michael&length=1&background=random&size=262",
       "physicaladdress": "53638",
+      "group": "Friends",
       "phone": "0700000017"
     },
     {
@@ -150,6 +168,7 @@
       "email": "allamusyoki@gmail.com",
       "name": "Alla Musyoki",
       "physicaladdress": "131425",
+      "group": "Family",
       "contactimage": "https://ui-avatars.com/api/?name=All&length=1&background=random&size=262"
     },
     {
@@ -158,6 +177,7 @@
       "email": "rosiecummings@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Rosie&length=1&background=random&size=262",
       "physicaladdress": "43637",
+      "group": "Friends",
       "phone": "0700000019"
     },
     {
@@ -166,6 +186,7 @@
       "email": "sanfordfrye@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Sanf&length=1&background=random&size=262",
       "physicaladdress": "34325",
+      "group": "Work",
       "phone": "0700000020"
     },
     {
@@ -174,6 +195,7 @@
       "email": "jannapeck@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Janna&length=1&background=random&size=262",
       "physicaladdress": "6189",
+      "group": "Family",
       "phone": "0700000021"
     },
     {
@@ -182,6 +204,7 @@
       "email": "lorrainesykes@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Lorra&length=1&background=random&size=262",
       "physicaladdress": "1527",
+      "group": "Family",
       "phone": "0700000022"
     },
     {
@@ -190,6 +213,7 @@
       "email": "vickifulton@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Vicki&length=1&background=random&size=262",
       "physicaladdress": "24265",
+      "group": "Family",
       "phone": "0700000023"
     },
     {
@@ -198,6 +222,7 @@
       "email": "masseymoody@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Massey&length=1&background=random&size=262",
       "physicaladdress": "4257",
+      "group": "Friends",
       "phone": "0700000024"
     },
     {
@@ -206,6 +231,7 @@
       "email": "grantberg@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Grant&length=1&background=random&size=262",
       "physicaladdress": "31416",
+      "group": "Family",
       "phone": "0700000025"
     },
     {
@@ -214,6 +240,7 @@
       "email": "hawkinswinters@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Hawkins&length=1&background=random&size=262",
       "physicaladdress": "5363",
+      "group": "Work",
       "phone": "0700000026"
     },
     {
@@ -222,6 +249,7 @@
       "email": "frazierdavidson@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Fraz&length=1&background=random&size=262",
       "physicaladdress": "90734",
+      "group": "Work",
       "phone": "0700000027"
     },
     {
@@ -230,6 +258,7 @@
       "email": "francinecervantes@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Franc&length=1&background=random&size=262",
       "physicaladdress": "62729",
+      "group": "Work",
       "phone": "0700000028"
     },
     {
@@ -238,6 +267,7 @@
       "email": "francisperez@gmail.com",
       "contactimage": "https://ui-avatars.com/api/?name=Francis&length=1&background=random&size=262",
       "physicaladdress": "25276",
+      "group": "Work",
       "phone": "0700000029"
     }
   ]

@@ -32,7 +32,7 @@ export class ContactService {
   }
 
   // Perform a search
-  searchContact(searchCriteria: { name?: string, email?: string, phone?: string }) {
+  searchContact(searchCriteria: { name?: string, email?: string, phone?: string, group?: string }) {
     const params = new HttpParams({ fromObject: searchCriteria });
     return this.http.get(this.baseUrl, { params })
   }
