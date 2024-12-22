@@ -92,7 +92,7 @@
         } @else {
           <tbody class="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
             @for (item of contactList; track item.id) {
-                <tr class="m-4">
+                <tr class="mr-8">
                   <span><input class="checkedContacts" [(ngModel)]="item.selected" type="checkbox" /><img class="w-10 h-10 m-4" src='{{item.contactimage}}' alt="" /></span>
                     <td class="flex flex-col sm:flex-row sm:items-center pr-4 max-w-[1440px] m-auto">{{ item.name}}</td>
                     <td><input class="m-1" [(ngModel)]="item.favorites" type="checkbox" /></td>

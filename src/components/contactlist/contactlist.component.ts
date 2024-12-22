@@ -42,7 +42,7 @@ export class ContactlistComponent implements OnInit{
   //When a user clicks on a contact,navigate to the contact details page with contact is
   toggle(contactId: number){
     //add recent contact ids to the array
-    this.recentlyViewed.unshift(contactId);
+    this.recentlyViewed?.unshift(contactId);
 
     // Limit the array to a maximum of 5 recent contact ids
     if (this.recentlyViewed.length > 5) {
@@ -90,7 +90,7 @@ export class ContactlistComponent implements OnInit{
 
   //view recent contacts
   recentContacts(){
-    this.recentlyViewed.map( (item: number) => {
+    this.recentlyViewed?.map( (item: number) => {
       this.contactService.getContactById(item).subscribe(data => {
         this.recent.push(data)
         this.contactList = this.recent
@@ -154,7 +154,7 @@ export class ContactlistComponent implements OnInit{
   //delete selected contacts
   bulkDeletion(){
     const contact = this.contactList.filter((contact: { selected: any; }) => contact.selected);
-    contact.map( (item: any) => {
+    contact?.map( (item: any) => {
       this.contactService.deleteContact(item.id).subscribe(data => {
         this.toast.success('Success Message','Contacts Deleted Successfully',3000)
       })
