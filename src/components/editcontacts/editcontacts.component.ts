@@ -67,12 +67,12 @@ export class EditcontactsComponent implements OnInit {
     //Validate data from the form and autofill
     this.editContactsForm = this.fb.group(
       {
-          name: [this.contactList?.name, Validators.required],
-          email: [ this.contactList?.email,[Validators.required, Validators.email], ],
-          phone: [ this.contactList?.phone, [Validators.required, Validators.minLength(10)],],
-          physicaladdress: [this.contactList?.physicaladdress,[Validators.required]],
-          contactimage: [this.contactList?.contactimage,[Validators.required]],
-          group: [this.contactList?.group,[Validators.required]],
+          name: ['', Validators.required],
+          email: [ '',[Validators.required, Validators.email], ],
+          phone: [ '', [Validators.required, Validators.minLength(10)],],
+          physicaladdress: ['',[Validators.required]],
+          contactimage: ['',[Validators.required]],
+          group: ['',[Validators.required]],
       },
   );
   

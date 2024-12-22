@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Contact } from '../contact';
 
 @Component({
   selector: 'app-contactlist',
@@ -26,9 +27,13 @@ export class ContactlistComponent implements OnInit{
   viewMode: 'list' | 'grid' = 'list';
   isDarkMode:boolean = false
   selectedGroup: string = 'All';
+  recentlyViewed: number[] = []
+
 
   //When a user clicks on a contact,navigate to the contact details page with contact is
   toggle(contactId: number){
+    this.recentlyViewed.unshift(contactId);
+    console.log('recent',this.recentlyViewed)
     this.router.navigate(['/contacts', contactId]);
   }
 
