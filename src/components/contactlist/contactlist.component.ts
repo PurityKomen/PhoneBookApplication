@@ -36,7 +36,7 @@ export class ContactlistComponent implements OnInit{
   viewMode: 'list' | 'grid' = 'list';
   isDarkMode:boolean = false
   selectedGroup: string = 'All';
-  recentlyViewed: any
+  recentlyViewed: any = []
   recent: any = []
 
   //When a user clicks on a contact,navigate to the contact details page with contact is
