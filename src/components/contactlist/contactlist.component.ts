@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { afterNextRender, Component, OnInit } from '@angular/core';
 import { ContactService } from '../contact.service';
 import { Router } from '@angular/router'; 
 import Swal from 'sweetalert2';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup} from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgToastService } from 'ng-angular-popup';
 
@@ -20,7 +20,15 @@ export class ContactlistComponent implements OnInit{
     private router: Router,
     public fb: FormBuilder,
     public toast:NgToastService,
-  ) {}
+  ) {
+    afterNextRender(() => {
+      // Check if there's any data stored in local storage
+      const storedData = localStorage.getItem('recentlyViewed');
+      if (storedData) {
+        this.recentlyViewed = JSON.parse(storedData);
+      }
+      })
+  }
 
   contactList!: any;
   searchForm!: FormGroup
@@ -85,7 +93,6 @@ export class ContactlistComponent implements OnInit{
     this.recentlyViewed.map( (item: number) => {
       this.contactService.getContactById(item).subscribe(data => {
         this.recent.push(data)
-        console.log('recent',this.recent)
         this.contactList = this.recent
       }) 
     })
@@ -154,16 +161,16 @@ export class ContactlistComponent implements OnInit{
     })
   }
 
+  //display favorite contacts
+  favorites(){
+    const favorites = this.contactList.filter((contact: { favorites: any; }) => contact.favorites);
+    this.contactList = favorites
+  }
+
   ngOnInit() {
     this.filteredContacts()
     
     this.fetchData()
-
-    // Check if there's any data stored in local storage
-    const storedData = localStorage.getItem('recentlyViewed');
-    if (storedData) {
-      this.recentlyViewed = JSON.parse(storedData);
-    }
 
 
     //Validate data from the form

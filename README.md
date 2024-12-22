@@ -6,6 +6,9 @@ A Phonebook application for displaying a list of contacts and viewing a single c
 
 ## Live Link
 
+1. For the whole app - 
+2. For the db.json file - 
+
 ## Project Setup
 
 1. Clone the application using git clone [https://github.com/PurityKomen/PhoneBookApplication.git](https://github.com/PurityKomen/PhoneBookApplication.git)
@@ -17,7 +20,7 @@ A Phonebook application for displaying a list of contacts and viewing a single c
 
 - ReactJs (Frontend)
 - JsonServer 
-- Tailwind (Styling)
+- TailwindCSS (Styling)
 - Karma for Testing
 - VsCode as my text editor
 - Vercel for deployment
@@ -37,7 +40,19 @@ Your client application should have these sets of screens/pages:
 
 6. Bulk deletion of contacts
 
-7. Homepage toggle
+7. Homepage toggle between grid and list view
+
+## Enhanced Features 
+
+1. Contact Grouping i.e Family,Friends,Work
+
+2. Favorites Section
+
+3. Import/Export Contacts
+
+4. Dark Mode
+
+5. Recent Contacts
 
 ## License
 
