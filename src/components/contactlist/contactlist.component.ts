@@ -147,7 +147,7 @@ export class ContactlistComponent implements OnInit{
 
   //delete selected contacts
   bulkDeletion(){
-    const contact = this.contactList.filter((contact: { selected: any; }) => contact.selected);
+    const contact = this.contactList?.filter((contact: { selected: any; }) => contact.selected);
     contact?.map( (item: any) => {
       this.contactService.deleteContact(item.id).subscribe(data => {
         this.toast.success('Success Message','Contacts Deleted Successfully',3000)
@@ -157,7 +157,7 @@ export class ContactlistComponent implements OnInit{
 
   //display favorite contacts
   favorites(){
-    const favorites = this.contactList.filter((contact: { favorites: any; }) => contact.favorites);
+    const favorites = this.contactList?.filter((contact: { favorites: any; }) => contact.favorites);
     this.contactList = favorites
   }
 

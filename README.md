@@ -19,7 +19,7 @@ A Phonebook application for displaying a list of contacts and viewing a single c
 
 ## Technologies Used
 
-- ReactJs (Frontend)
+- Angular (Frontend)
 - JsonServer 
 - TailwindCSS (Styling)
 - Karma for Testing

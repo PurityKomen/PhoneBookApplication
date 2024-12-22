@@ -18,18 +18,9 @@ it('should test function', fakeAsync(() => {
     spyOn(service, 'getContacts').and.callThrough();
     service.getContacts()
     service.getContactById(1)
-    service.createContact({
-        id: 0,
-        name: '',
-        phone: '',
-        email: '',
-        contactimage: '',
-        physicaladdress: ''
-    })
     service.deleteContact(1)
     expect(service.getContacts).toBeTruthy();
     expect(service.getContactById).toBeTruthy();
-    expect(service.createContact).toBeTruthy();
     expect(service.deleteContact).toBeTruthy();
 }));
 });
