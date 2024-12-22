@@ -9,7 +9,7 @@ export class ContactService {
 
   constructor(private http: HttpClient) { }
 
-  baseUrl: string = 'http://localhost:3000/contacts'
+  baseUrl: string = 'https://contacts-99ituwowc-jepkorirpurity8gmailcoms-projects.vercel.app/contacts'
 
   // get all contact
   getContacts() {
