@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Contact } from '../contact';
+import { NgToastService } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-contactlist',
@@ -19,6 +19,7 @@ export class ContactlistComponent implements OnInit{
     private contactService:ContactService,
     private router: Router,
     public fb: FormBuilder,
+    public toast:NgToastService,
   ) {}
 
   contactList!: any;
@@ -128,6 +129,7 @@ export class ContactlistComponent implements OnInit{
     document.body.classList.toggle('dark');
   }
 
+  //filter contacts based on family,friends or work
   filteredContacts(){
     const body = {
       group: this.filterForm?.value.group
@@ -140,6 +142,16 @@ export class ContactlistComponent implements OnInit{
         this.filterForm?.reset()
       })
     }
+  }
+
+  //delete selected contacts
+  bulkDeletion(){
+    const contact = this.contactList.filter((contact: { selected: any; }) => contact.selected);
+    contact.map( (item: any) => {
+      this.contactService.deleteContact(item.id).subscribe(data => {
+        this.toast.success('Success Message','Contacts Deleted Successfully',3000)
+      })
+    })
   }
 
   ngOnInit() {
@@ -162,6 +174,7 @@ export class ContactlistComponent implements OnInit{
       },
   );
 
+  //filter form
   this.filterForm = this.fb.group(
     {
         group: ['All']
