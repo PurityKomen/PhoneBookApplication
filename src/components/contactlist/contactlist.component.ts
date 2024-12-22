@@ -27,13 +27,22 @@ export class ContactlistComponent implements OnInit{
   viewMode: 'list' | 'grid' = 'list';
   isDarkMode:boolean = false
   selectedGroup: string = 'All';
-  recentlyViewed: number[] = []
-
+  recentlyViewed: any
+  recent: any = []
 
   //When a user clicks on a contact,navigate to the contact details page with contact is
   toggle(contactId: number){
+    //add recent contact ids to the array
     this.recentlyViewed.unshift(contactId);
-    console.log('recent',this.recentlyViewed)
+
+    // Limit the array to a maximum of 5 recent contact ids
+    if (this.recentlyViewed.length > 5) {
+      this.recentlyViewed.pop()
+    }
+
+    // Store the updated array in local storage
+    localStorage.setItem('recentlyViewed', JSON.stringify(this.recentlyViewed)); 
+
     this.router.navigate(['/contacts', contactId]);
   }
 
@@ -68,6 +77,17 @@ export class ContactlistComponent implements OnInit{
     this.contactService.getContacts().subscribe(data => {
       this.contactList = data.sort((a,b) => a.name > b.name ? 1 : -1)
     }) 
+  }
+
+  //view recent contacts
+  recentContacts(){
+    this.recentlyViewed.map( (item: number) => {
+      this.contactService.getContactById(item).subscribe(data => {
+        this.recent.push(data)
+        console.log('recent',this.recent)
+        this.contactList = this.recent
+      }) 
+    })
   }
 
   //Perform a search for either the name,phone nummber or email
@@ -126,6 +146,13 @@ export class ContactlistComponent implements OnInit{
     this.filteredContacts()
     
     this.fetchData()
+
+    // Check if there's any data stored in local storage
+    const storedData = localStorage.getItem('recentlyViewed');
+    if (storedData) {
+      this.recentlyViewed = JSON.parse(storedData);
+    }
+
 
     //Validate data from the form
     this.searchForm = this.fb.group(
