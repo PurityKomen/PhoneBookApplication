@@ -45,7 +45,7 @@ export class ContactlistComponent implements OnInit{
     this.recentlyViewed?.unshift(contactId);
 
     // Limit the array to a maximum of 5 recent contact ids
-    if (this.recentlyViewed.length > 5) {
+    if (this.recentlyViewed?.length > 5) {
       this.recentlyViewed.pop()
     }
 
