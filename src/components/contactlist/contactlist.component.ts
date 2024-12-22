@@ -101,9 +101,7 @@ export class ContactlistComponent implements OnInit{
   //Perform a search for either the name,phone nummber or email
   searchContactsDetail(){
     const searchCriteria = {
-      name: '',
-      email: '',
-      phone: ''
+      name: ''
     };
     const searchField = this.searchForm?.value.searchField;
     const body = this.searchForm?.value.name
@@ -111,11 +109,7 @@ export class ContactlistComponent implements OnInit{
     //Determine if its name,email,or phone
     if (searchField === 'name') {
       searchCriteria.name = body;
-    } else if (searchField === 'email') {
-      searchCriteria.email = body
-    } else if (searchField === 'phone') {
-      searchCriteria.phone = body
-    }
+    } 
 
     //Update data with the data from the form
     this.contactService.searchContact(searchCriteria).subscribe(data => {

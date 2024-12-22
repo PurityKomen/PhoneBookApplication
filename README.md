@@ -6,7 +6,9 @@ A Phonebook application for displaying a list of contacts and viewing a single c
 
 ## Live Link
 
-1. [https://phone-book-application-n45dm2oiv.vercel.app/contacts](https://phone-book-application-n45dm2oiv.vercel.app/contacts)
+1. For the whole app - [https://phone-book-application-n45dm2oiv.vercel.app/contacts](https://phone-book-application-n45dm2oiv.vercel.app/contacts)
+
+2. For the db.json file - [https://contacts-99ituwowc-jepkorirpurity8gmailcoms-projects.vercel.app/contacts](https://contacts-99ituwowc-jepkorirpurity8gmailcoms-projects.vercel.app/contacts)
 
 ## Project Setup
 

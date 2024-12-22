@@ -94,8 +94,7 @@
             @for (item of contactList; track item.id) {
                 <tr class="mr-8">
                   <span><input class="checkedContacts" [(ngModel)]="item.selected" type="checkbox" /><img class="w-10 h-10 m-4" src='{{item.contactimage}}' alt="" /></span>
-                    <td class="flex flex-col sm:flex-row sm:items-center pr-4 max-w-[1440px] m-auto">{{ item.name}}</td>
-                    <td><input class="m-1" [(ngModel)]="item.favorites" type="checkbox" /></td>
+                    <td class="flex flex-col sm:flex-row sm:items-center pr-4 max-w-[1440px] m-auto">{{ item.name}} <input class="m-1" [(ngModel)]="item.favorites" type="checkbox" /></td>
                     <td>{{ item.phone}}</td>
                     <div class="flex flex-col sm:flex-row sm:items-center pr-4 max-w-[1440px] m-auto">
                       <span (click)="edit(item.id)"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50">
